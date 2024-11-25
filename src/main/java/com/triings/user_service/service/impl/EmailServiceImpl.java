@@ -54,7 +54,7 @@ public class EmailServiceImpl implements EmailService {
             user.setPassword(passwordEncoder.encode(otp));
             user.setPasswordUpdatedAt(Instant.now().toEpochMilli());
             userRepository.save(user);
-            return OTPResponseVO.builder().response("OTP sent successfully.").build();
+            return OTPResponseVO.builder().response("OTP sent successfully. \n OTP : " + otp).build();
         }
         throw new BadRequestException("EMAIL_SEND_FAILURE", "Failed to send OTP.");
     }

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin
+
 @RequestMapping("/api/v1/otp")
 public class OTPController {
 
@@ -20,5 +20,4 @@ public class OTPController {
     public ResponseVO<OTPResponseVO> sendOTP(@RequestBody OtpVO otpRequest) {
         return new ResponseVO<>("SUCCESS", HttpStatus.OK.name(), emailService.sendOTP(otpRequest.getEmail().trim().toLowerCase()));
     }
-
 }
