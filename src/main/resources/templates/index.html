@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pangeanis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            width: 600px;
+            margin: 50px auto;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: transparent;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .body-content {
+            padding: 20px;
+            line-height: 1.6;
+            color: #333333;
+            margin-top: -50px;
+        }
+        .footer {
+            background: #5a189a;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 0;
+            background: #5a189a;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .otp {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #5a189a;
+            color: #ffffff;
+            display: block;
+            max-width: 100px;
+            text-align: center;
+            border-radius: 5px;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body>
+<div class="email-container">
+    <!-- Header -->
+    <div class="header">
+        <img src="https://www.pangeanis.com/assets/img/logo.png" width="240" />
+    </div>
+
+    <!-- Body -->
+    <div class="body-content">
+        <h1 style="text-align: center; font-size: 26px">Your One-Time Password (OTP)</h1>
+        <p>Please use the following One-Time Password to complete your registration. This password is only valid for a short period of time.</p>
+
+        <div class="otp">
+            [[${otp}]]
+        </div>
+
+        <p>If you did not request this code, please ignore this email or contact support if you have concerns.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2024 | Pangeanis<br>
+        <a href="https://pangeanis.com">Pangeanis</a>
+    </div>
+</div>
+</body>
+</html>
